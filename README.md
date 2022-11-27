@@ -1,6 +1,7 @@
 # ecommagix
 
 A new Flutter project.
+![Media_221127_225717](https://user-images.githubusercontent.com/88076276/204150548-0582d0c9-2e74-4027-a7b6-f6d6e766b171.gif)
 
 ## Getting Started
 
