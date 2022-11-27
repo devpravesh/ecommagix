@@ -28,7 +28,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
                         width: 100.0,
                         decoration: BoxDecoration(shape: BoxShape.circle),
                         child: CircleAvatar(
-                          backgroundImage: AssetImage('images/face_image.jpg'),
+                          backgroundImage:
+                              AssetImage('assets/images/face_image.jpg'),
                           backgroundColor: Colors.yellow,
                         ),
                       ),
@@ -91,6 +92,20 @@ class _DrawerMenuState extends State<DrawerMenu> {
                           leading: Icon(Icons.info, color: Colors.black),
                           title: TextBuilder(
                               text: "About App",
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: (() {
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (_) => Login()));
+                        }),
+                        child: ListTile(
+                          leading: Icon(Icons.logout, color: Colors.black),
+                          title: TextBuilder(
+                              text: "LogOut",
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),

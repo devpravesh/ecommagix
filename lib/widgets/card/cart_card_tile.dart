@@ -21,6 +21,8 @@ class CartCardTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final cart = Provider.of<CartItems>(context);
+
     final totalPrice = (price! * quantity!);
 
     return Card(
@@ -68,7 +70,7 @@ class CartCardTile extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: TextBuilder(text: category, fontSize: 12.0),
                   ),
-                  const SizedBox(height: 8.0),
+                  const SizedBox(height: 2.0),
                   Padding(
                     padding: EdgeInsets.only(left: 2, right: 2),
                     child: Row(
@@ -83,6 +85,14 @@ class CartCardTile extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Colors.blue,
                         ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              cart.removeItem(productId.toString());
+                            },
+                            child: Icon(Icons.delete_outline_sharp))
                       ],
                     ),
                   ),

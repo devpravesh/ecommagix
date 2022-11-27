@@ -66,11 +66,11 @@ class ProductCardTile extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 5.0),
+            const SizedBox(height: 2.0),
             Expanded(
-              flex: 3,
+              flex: 4,
               child: Padding(
-                padding: EdgeInsets.all(5.0),
+                padding: EdgeInsets.all(2.0),
                 child: Column(
                   children: [
                     Align(
@@ -79,7 +79,7 @@ class ProductCardTile extends StatelessWidget {
                         text: data['title'],
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
-                        fontSize: 16,
+                        fontSize: 14,
                         maxLines: 2,
                         textOverflow: TextOverflow.ellipsis,
                       ),
